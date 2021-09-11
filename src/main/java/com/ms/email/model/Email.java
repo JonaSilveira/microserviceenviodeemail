@@ -5,6 +5,7 @@ import com.ms.email.enums.StatusEmail;
 import lombok.Data;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,6 +27,7 @@ public class Email implements Serializable {
     @ToString.Exclude private String id;
 
     private String ownerRef;
+    @Value("")
     private String emailFrom;
     private String emailTo;
     private String subject;
